@@ -188,6 +188,28 @@
   <footer>
     <p>© 2025 Özer Aşireti</p>
   </footer>
+<section id="belgeler" style="padding: 20px;">
+  <h2>Belgeler (Üyelere Özel)</h2>
+  <p>Şifre girerek belgeleri indirebilirsiniz:</p>
+  <input type="password" id="password" placeholder="Şifreyi girin">
+  <button onclick="checkPassword()">Giriş Yap</button>
 
+  <div id="downloadSection" style="display:none; margin-top: 15px;">
+    <p>✔ Giriş başarılı! Aşağıdaki belgeye erişebilirsiniz:</p>
+    <a href="belgeler/rapor.pdf" download>📥 Raporu İndir</a>
+  </div>
+</section>
+
+<script>
+  function checkPassword() {
+    const correctPassword = "ozer2025"; // Şifreni buraya yaz
+    const userInput = document.getElementById("password").value;
+    if (userInput === correctPassword) {
+      document.getElementById("downloadSection").style.display = "block";
+    } else {
+      alert("❌ Yanlış şifre!");
+    }
+  }
+</script>
 </body>
 </html>
