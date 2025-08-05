@@ -4,33 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Özer Aşireti</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body><body>
-  <div class="overlay"></div>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-  <div class="content">
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #8B0000;
+    }
+
+    footer {
+      background-color: #8B0000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #8B0000;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a30000;
+    }
+  </style>
+</head>
+<body>
+  <header>
     <h1>Özer Aşireti</h1>
     <p>Hoş geldiniz!</p>
-    <!-- diğer içerikler burada -->
-  </div>
-</body>
-  <div class="background-flag"></div>
+  </header>
 
-  <div class="content">
-    <h1>Özer Aşireti'ne Hoş Geldiniz</h1>
-    <p>Birliğimiz, tarihimiz ve liderlerimizle gurur duyuyoruz.</p>
+  <main>
+    <section>
+      <h2>Hakkımızda</h2>
+      <p>2021 yılında çöktük çünkü Hacı Bahri 2018 yılında Bismil’in hepsini sattı ve biz artık Diyarbakır'dayız. 
+      Günümüzde Said Özer, aşireti yeniden kuruyor.</p>
+    </section>
 
-    <h2>Sait Özer Kimdir?</h2>
-    <p>2011 Ekim ayında Diyarbakır’da doğan Sait Özer, ilkokulu Yenişehir İlkokulu’nda tamamladı. İlk öğretmeni Ayfer Tokalak, ardından Şerif Atlı ve Fethullah Bulut’tan eğitim aldı. Ortaokulu Diyarbakır Yenişehir Mahallesi’ndeki Ali Emre Ortaokulu'nda bitirdi. Günümüzde Gaffar Okan Lisesi’ne hazırlanmaktadır.</p>
+    <section>
+      <h2>Eski Liderler</h2>
+      <ul>
+        <li><strong>Kurucu:</strong> Xale Şeğo (1900 - 1944)</li>
+        <li>Hacı Bahri (1944 - 1970)</li>
+        <li>Ekrem Özer (1970 - 2007)</li>
+        <li>Kerem Özer (2007 - 2018)</li>
+        <li>Hacı Abdullah Özer (2018 - 2021)</li>
+        <li><strong>Günümüz ağası:</strong> Said Özer (2025 - )</li>
+      </ul>
+    </section>
 
-    <h2>İletişim</h2>
-    <form>
-      <input type="text" placeholder="Adınız" required>
-      <input type="email" placeholder="E-posta" required>
-      <textarea placeholder="Mesajınız"></textarea>
-      <button type="submit">Gönder</button>
-    </form>
-  </div>
+    <section>
+      <h2>Said Özer Kimdir?</h2>
+      <p>2011 yılının Ekim ayının 1’inde Diyarbakır’da doğdu.  
+         İlkokulu Yenişehir İlkokulu'nda “İ” şubesinde okudu.  
+         1. sınıfta öğretmeni Ayfer Tokalak,  
+         2. ve 3. sınıfta öğretmeni Şerif Atlı,  
+         4. sınıfta ise öğretmeni Fethullah Bulut’tur.  
+         Ortaokulu Diyarbakır Yenişehir Mahallesi’ndeki Ali Emre Ortaokulu'nda okudu ve  
+         şimdi Gaffar Okan Lisesi’ne hazırlanmaktadır.</p>
+    </section>
+
+    <section>
+      <h2>İletişim</h2>
+      <form>
+        <label for="name">Ad Soyad:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Özer Aşireti
+  </footer>
 </body>
 </html>
