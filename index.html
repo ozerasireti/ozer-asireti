@@ -1,226 +1,151 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Özer Aşireti</title>
   <style>
     body {
-      margin: 0;
+      background-color: white;
+      color: #b30000;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
+      margin: 0;
+      padding: 0;
     }
-
     header {
-      background-color: #222;
-      padding: 20px;
+      background-color: #b30000;
       color: white;
+      padding: 20px;
       text-align: center;
     }
-
-    nav {<!-- nav kısmına ekle -->
-<a href="#iletisim">İletişim</a>
-      background-color: #444;
-      display: flex;
-      justify-content: center;
+    nav {
+      background-color: #e60000;
+      padding: 10px;
+      text-align: center;
     }
-
     nav a {
       color: white;
+      margin: 10px;
       text-decoration: none;
-      padding: 14px 20px;
-      display: block;
+      font-weight: bold;
     }
-
-    nav a:hover {
-      background-color: #666;
-    }
-
     section {
-      padding: 40px;
+      padding: 20px;
       max-width: 800px;
       margin: auto;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
     footer {
-      background-color: #222;
+      background-color: #b30000;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 10px;
     }
- <style>
-  body {
-    background-color: white;
-    color: #b30000; /* koyu kırmızı metin */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    background-color: #b30000; /* kırmızı */
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-
-  nav {
-    background-color: #007a33; /* yeşil */
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  section {<section id="mahmut">
-  <h2>Mahmut Demiroğlu</h2>
-  <p>
-    Aşiret halkının sevilen ve zeki bireylerinden biri olan <strong>Mahmut Demiroğlu</strong>,
-    14 yaşında genç yaşına rağmen Özer Aşireti içinde saygı gören bir isimdir.
-  </p>
-  <p>
-    Said Ağa’nın kuzeni olarak, aşiret içinde hem manevi bağları hem de güçlü karakteriyle
-    dikkat çeker. Mahmut, genç yaşta sorumluluk almayı bilen, saygılı ve çalışkan yapısıyla
-    aşiretin geleceğinde önemli bir yere sahip olacaktır. Ve Ağa Olmaya Taliptir
-  </p>
-  <p>
-    Ankara'da eğitimine devam eden Mahmut, aynı zamanda aşiret geleneklerine ve kültürüne
-    bağlılığı ile tanınır.
-  </p>
-</section>
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-
-  h2 {
-    color: #007a33; /* yeşil başlıklar */
-    border-bottom: 2px solid #b30000;
-    padding-bottom: 10px;
-  }
-
-  footer {
-    background-color: #b30000; /* kırmızı */
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-
-  button, input[type="submit"] {
-    background-color: #007a33; /* yeşil buton */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-  button:hover, input[type="submit"]:hover {
-    background-color: #005a26;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #b30000;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-  }
-</style> </style>
+    .iletisim-formu {
+      background-color: #fff5f5;
+      padding: 15px;
+      border: 1px solid #b30000;
+      border-radius: 5px;
+    }
+    .iletisim-formu input, .iletisim-formu textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .iletisim-formu button {
+      background-color: #b30000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .iletisim-formu button:hover {
+      background-color: #800000;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Özer Aşireti</h1>
-    <p>Resmi Tanıtım Sitesi</p>
+    <p>Birlik, Onur ve Geçmişten Gelen Güç</p>
   </header>
 
   <nav>
     <a href="#hakkimizda">Hakkımızda</a>
-    <a href="#liderler">Liderler</a>
-    <a href="#said-ozer">Said Özer</a>
+    <a href="#liderler">Eski Liderler</a>
+    <a href="#said">Said Özer</a>
+    <a href="#mahmut">Mahmut Demiroğlu</a>
+    <a href="#iletisim">İletişim</a>
   </nav>
 
   <section id="hakkimizda">
     <h2>Hakkımızda</h2>
     <p>
-      Özer Aşireti, köklü tarihiyle bölgede önemli bir yer edinmiştir. 
-      2021 yılında yaşanan büyük kayıplar sonrası yeniden yapılanma sürecine girilmiş; 
-      Diyarbakır’a yerleşilmiştir. Günümüzde aşiret, genç lideri Said Özer önderliğinde 
-      geçmiş mirası yaşatmaya ve geleceği inşa etmeye devam etmektedir.
+      Özer Aşireti 2021 yılında geçici olarak dağılmıştır. Bunun sebebi, Hacı Bahri’nin 2018 yılında Bismil’in tüm arazilerini satmış olmasıdır. 
+      Bugün aşiret, Diyarbakır'da yeniden yapılanmakta ve güçlü bir şekilde Said Özer önderliğinde toparlanmaktadır.
     </p>
-  </section><section id="iletisim">
-  <h2>İletişim</h2>
-  <form action="https://formspree.io/f/moqzqozz" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto;">
-    <label for="name">Adınız:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">E-posta Adresiniz:</label>
-    <input type="email" id="email" name="_replyto" required>
-
-    <label for="message">Mesajınız:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit" style="padding: 10px 20px; background-color: #444; color: white; border: none; cursor: pointer;">
-      Gönder
-    </button>
-  </form>
-</section>
+  </section>
 
   <section id="liderler">
-    <h2>Aşiret Liderleri</h2>
+    <h2>Eski Liderler</h2>
     <ul>
-      <li><strong>Kurucu:</strong> Xale Şeğo (1900 - 1944)</li>
-      <li><strong>Hacı Bahri</strong> (1944 - 1970)</li>
-      <li><strong>Ekrem Özer</strong> (1970 - 2007)</li>
-      <li><strong>Kerem Özer</strong> (2007 - 2018)</li>
-      <li><strong>Hacı Abdullah Özer</strong> (2018 - 2021)</li>
-      <li><strong>Günümüz Ağası:</strong> Said Özer (2025 - )</li>
+      <li><strong>Xale Şeğo</strong> — 1900 - 1944</li>
+      <li><strong>Hacı Bahri</strong> — 1944 - 1970</li>
+      <li><strong>Ekrem Özer</strong> — 1970 - 2007</li>
+      <li><strong>Kerem Özer</strong> — 2007 - 2018</li>
+      <li><strong>Hacı Abdullah Özer</strong> — 2018 - 2021</li>
+      <li><strong>Said Özer</strong> — 2025 - Günümüz</li>
     </ul>
   </section>
 
-  <section id="said-ozer">
-    <h2>Said Özer'in Hayat Hikayesi</h2>
+  <section id="said">
+    <h2>Said Özer Kimdir?</h2>
     <p>
-      Said Özer, 1 Ekim 2011 tarihinde Diyarbakır'da dünyaya gelmiştir. İlköğretim hayatına Yenişehir İlkokulu'nda başlamış, I şubesinde eğitim görmüştür.
-      İlk öğretmeni Ayfer Tokalak, ardından Şerif Atlı ve Fethullah Bulut olmuştur. 
-      Ortaokulunu Ali Emre Ortaokulu’nda tamamlamış ve mezun olmuştur.
-      Günümüzde Gaffar Okan Anadolu Lisesi’ne hazırlanmaktadır.
-      <br><br>
-      Ailesine ve aşiretine olan bağlılığıyla dikkat çeken Said Özer, 2025 yılında Özer Aşireti'nin yeni ağası olarak kabul edilmiştir.
-      Genç yaşına rağmen önemli sorumluluklar üstlenmiş ve aşireti yeniden ayağa kaldırma yolunda kararlılıkla ilerlemektedir.
+      Said Özer, 1 Ekim 2011 tarihinde Diyarbakır'da doğmuştur. İlkokulu Yenişehir İlkokulu’nda “İ” şubesinde okumuştur.
+      İlk öğretmeni Ayfer Tokalak, ikinci ve üçüncü sınıfta öğretmeni Şerif Atlı, dördüncü sınıfta ise öğretmeni Fethullah Bulut olmuştur.
+    </p>
+    <p>
+      Ortaokulu, Diyarbakır Yenişehir Mahallesi'nde yer alan Ali Emre Ortaokulu’nda tamamlamıştır. Günümüzde mezun olup Gaffar Okan Lisesi’ne hazırlanmaktadır.
+      Aşiretini yeniden ayağa kaldıran lider olarak saygı görmektedir.
+    </p>
+  </section>
+
+  <section id="mahmut">
+    <h2>Mahmut Demiroğlu</h2>
+    <p>
+      Aşiret halkının sevilen ve zeki bireylerinden biri olan <strong>Mahmut Demiroğlu</strong>, 
+      14 yaşında genç yaşına rağmen Özer Aşireti içinde saygı gören bir isimdir.
+    </p>
+    <p>
+      Said Ağa’nın kuzeni olarak, aşiret içinde hem manevi bağları hem de güçlü karakteriyle dikkat çeker.
+      Genç yaşta sorumluluk almayı bilen, saygılı ve çalışkan yapısıyla aşiretin geleceğinde önemli bir yere sahiptir.
+    </p>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <div class="iletisim-formu">
+      <label for="isim">Adınız:</label>
+      <input type="text" id="isim" name="isim" placeholder="Adınızı girin">
+
+      <label for="mesaj">Mesajınız:</label>
+      <textarea id="mesaj" name="mesaj" rows="4" placeholder="Mesajınızı yazın"></textarea>
+
+      <button type="submit">Gönder</button>
+    </div>
+
+    <p style="margin-top:20px;">
+      📷 <a href="https://instagram.com/kendi_instagramin" target="_blank">Instagram</a>
     </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Özer Aşireti. Tüm hakları saklıdır.</p>
-  </footer><footer style="text-align: center; padding: 20px; background-color: #f4f4f4;">
-  <p>© 2025 Özer Aşireti</p>
-  <p>
-    <a href="https://instagram.com/said_ozer2134" target="_blank">Instagram'da Bizi Takip Et</a>
-  </p>
-</footer>
+    <p>&copy; 2025 Özer Aşireti | Tüm Hakları Saklıdır.</p>
+  </footer>
 
 </body>
 </html>
