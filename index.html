@@ -1,93 +1,80 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Özer Aşireti</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background: url('DDAD9996-1A6A-42A1-9B04-42BCD56B13BB.png') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5); /* %50 opaklık */
-      padding: 20px;
-      min-height: 100vh;
-    }
-    header {
-      text-align: center;
-      padding: 30px 0;
-    }
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-    }
-    h2 {
-      border-bottom: 1px solid white;
-      padding-bottom: 5px;
-    }
-  </style>
-</head>
-<body><!DOCTYPE html>
-<html lang="tr">
-<head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Özer Aşireti</title>
   <style>
     body {
+      background-color: #f2f2f2;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('bayrak.png') no-repeat center center fixed
-  <div class="overlay">
-    <header>
-      <h1>Özer Aşireti</h1>
-      <p>Resmi Web Sitesi</p>
-    </header>
+      color: #222;
+    }
 
-    <nav>
-      <a href="#hosgeldiniz">Hoşgeldiniz</a>
-      <a href="#liderler">Eski Liderler</a>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#sait">Said Özer</a>
-    </nav>
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-    <section id="hosgeldiniz">
-      <h2>Hoşgeldiniz</h2>
-      <p>Özer Aşireti'nin resmi web sitesine hoşgeldiniz. Tarihimizi, liderlerimizi ve günümüzdeki gelişmeleri bu sayfadan takip edebilirsiniz.</p>
-    </section>
+    .container {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
 
-    <section id="liderler">
-      <h2>Eski Aşiret Liderleri</h2>
-      <ul>
-        <li><strong>Xale Şeğo</strong> (1900 - 1944)</li>
-        <li><strong>Hacı Bahri</strong> (1944 - 1970)</li>
-        <li><strong>Ekrem Özer</strong> (1970 - 2007)</li>
-        <li><strong>Kerem Özer</strong> (2007 - 2018)</li>
-        <li><strong>Hacı Abdullah Özer</strong> (2018 - 2021)</li>
-        <li><strong>Said Özer</strong> (2025 - Günümüz)</li>
-      </ul>
-    </section>
+    h1, h2 {
+      color: #8B0000;
+    }
 
-    <section id="hakkimizda">
-      <h2>Hakkımızda</h2>
-      <p>2021 yılında aşiretimizde bazı sorunlar yaşandı. Hacı Bahri'nin 2018 yılında Bismil'in tamamını satmasıyla dağılan yapımız, artık Diyarbakır'da yeniden bir araya geliyor. Şimdi, Said Özer'in liderliğinde yeniden yapılanıyoruz.</p>
-    </section>
+    p {
+      line-height: 1.6;
+    }
 
-    
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Özer Aşireti</h1>
+    <p>Resmi Web Sayfası</p>
+  </header>
+
+  <div class="container">
+    <h2>Kurucular ve Liderler</h2>
+    <p>
+      • Xale Şeğo (1900 - 1944)<br>
+      • Hacı Bahri (1944 - 1970)<br>
+      • Ekrem Özer (1970 - 2007)<br>
+      • Kerem Özer (2007 - 2018)<br>
+      • Hacı Abdullah Özer (2018 - 2021)<br>
+      • Said Özer (2025 - Günümüz)
+    </p>
+
+    <h2>Said Özer Kimdir?</h2>
+    <p>1 Ekim 2011’de Diyarbakır’da doğmuştur. İlkokul eğitimini Yenişehir İlkokulu 1-İ sınıfında almıştır.</p>
+    <p>İlk öğretmeni Ayfer Tokalak’tır. 2. ve 3. sınıflarda Şerif Atlı, 4. sınıfta ise Fethullah Bulut öğretmenliğini yapmıştır.</p>
+    <p>Ortaokulunu Diyarbakır Yenişehir Mahallesi’nde bulunan Ali Emre Ortaokulu’nda tamamlamıştır.</p>
+    <p>Günümüzde Gaffar Okan Lisesi’ne hazırlanmaktadır.</p>
+  </div>
+
+  <footer>
+    © 2025 Özer Aşireti - Tüm Hakları Saklıdır
+  </footer>
+
+</body>
+</html>
