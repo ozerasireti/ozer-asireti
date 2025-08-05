@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Özer Aşireti</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
     }
 
@@ -20,6 +19,27 @@
       text-align: center;
     }
 
+    nav {
+      background-color: #a30000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       padding: 20px;
       max-width: 800px;
@@ -27,7 +47,7 @@
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     h2 {
@@ -39,9 +59,7 @@
       color: white;
       text-align: center;
       padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: 50px;
     }
 
     input, textarea {
@@ -73,52 +91,21 @@
     <p>Hoş geldiniz!</p>
   </header>
 
+  <nav>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#liderler">Liderler</a>
+    <a href="#said">Said Özer</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
   <main>
-    <section>
+    <section id="hakkimizda">
       <h2>Hakkımızda</h2>
       <p>2021 yılında çöktük çünkü Hacı Bahri 2018 yılında Bismil’in hepsini sattı ve biz artık Diyarbakır'dayız. 
       Günümüzde Said Özer, aşireti yeniden kuruyor.</p>
     </section>
 
-    <section>
+    <section id="liderler">
       <h2>Eski Liderler</h2>
       <ul>
-        <li><strong>Kurucu:</strong> Xale Şeğo (1900 - 1944)</li>
-        <li>Hacı Bahri (1944 - 1970)</li>
-        <li>Ekrem Özer (1970 - 2007)</li>
-        <li>Kerem Özer (2007 - 2018)</li>
-        <li>Hacı Abdullah Özer (2018 - 2021)</li>
-        <li><strong>Günümüz ağası:</strong> Said Özer (2025 - )</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Said Özer Kimdir?</h2>
-      <p>2011 yılının Ekim ayının 1’inde Diyarbakır’da doğdu.  
-         İlkokulu Yenişehir İlkokulu'nda “İ” şubesinde okudu.  
-         1. sınıfta öğretmeni Ayfer Tokalak,  
-         2. ve 3. sınıfta öğretmeni Şerif Atlı,  
-         4. sınıfta ise öğretmeni Fethullah Bulut’tur.  
-         Ortaokulu Diyarbakır Yenişehir Mahallesi’ndeki Ali Emre Ortaokulu'nda okudu ve  
-         şimdi Gaffar Okan Lisesi’ne hazırlanmaktadır.</p>
-    </section>
-
-    <section>
-      <h2>İletişim</h2>
-      <form>
-        <label for="name">Ad Soyad:</label>
-        <input type="text" id="name" name="name">
-
-        <label for="message">Mesajınız:</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit">Gönder</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Özer Aşireti
-  </footer>
-</body>
-</html>
+        <li><strong
