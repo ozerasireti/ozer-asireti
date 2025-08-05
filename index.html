@@ -143,6 +143,21 @@
     <h3>📢 Mahmut Demiroğlu’nun Konuşması</h3>
     <p>Mahmut: “Birlikte daha güçlüyüz. Gençlik, Özer Aşireti’nin geleceğidir.”</p>
   </div>
+</section><section id="yorumlar">
+  <h2>💬 Yorumlar</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = window.location.pathname;
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://SENIN-SITE-ADI.disqus.com/embed.js';  // ← burayı değiştir
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 </section>
 
 <section id="soyağacı">
