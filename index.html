@@ -6,141 +6,185 @@
   <title>Özer Aşireti</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #b30000 0%, white 50%, green 100%);
-      color: #222;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #b30000 33%, white 33%, white 66%, #0f7d0f 66%);
+      color: #333;
     }
     header {
+      background-color: rgba(255, 255, 255, 0.8);
       text-align: center;
       padding: 20px;
-      background-color: transparent;
-      color: #000;
     }
     nav {
-      background-color: #eee;
       text-align: center;
+      background-color: #fff;
       padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #b30000;
       font-weight: bold;
+      color: #b30000;
     }
     section {
-      padding: 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      background-color: #fff;
-      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
     }
     h2 {
+      color: #b30000;
       border-bottom: 2px solid #b30000;
       padding-bottom: 5px;
+    }
+    .haber, .yorum {
+      background-color: #f9f9f9;
+      border-left: 4px solid #b30000;
+      padding: 15px;
+      margin: 10px 0;
     }
     footer {
       background-color: #b30000;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 30px;
-    }
-    .haber {
-      background-color: #f9f9f9;
-      border-left: 4px solid #b30000;
       padding: 15px;
-      margin-bottom: 20px;
+      margin-top: 40px;
     }
-    #admin-panel {
+    .admin-panel {
       display: none;
     }
   </style>
+  <script>
+    function login() {
+      const pass = prompt("Yönetici parolası:");
+      if(pass === "ozer123") {
+        document.getElementById("admin-panel").style.display = "block";
+        alert("Giriş başarılı.");
+      } else {
+        alert("Hatalı parola!");
+      }
+    }
+
+    function changeLanguage(lang) {
+      alert("Dil desteği şu an yalnızca görsel olarak çalışmaktadır: " + lang);
+    }
+  </script>
 </head>
 <body>
 
-  <header>
-    <h1>Özer Aşireti Resmi Sayfası</h1>
-  </header>
+<header>
+  <h1>Özer Aşireti Resmi Sayfası</h1>
+</header>
 
-  <nav>
-    <a href="#hakkimizda">Hakkımızda</a>
-    <a href="#liderler">Liderler</a>
-    <a href="#mahmut">Mahmut Demiroğlu</a>
-    <a href="#haberler">Haberler</a>
-    <a href="#iletisim">İletişim</a>
-    <a href="#" onclick="showLogin()">Yönetici Paneli</a>
-  </nav>
+<nav>
+  <a href="#hakkimizda">Hakkımızda</a>
+  <a href="#liderler">Liderler</a>
+  <a href="#said">Said Özer</a>
+  <a href="#mahmut">Mahmut Demiroğlu</a>
+  <a href="#haberler">Haberler</a>
+  <a href="#soyağacı">Soy Ağacı</a>
+  <a href="#yorumlar">Yorumlar</a>
+  <a href="#iletisim">İletişim</a>
+  <a href="#" onclick="login()">Admin Girişi</a>
+  <select onchange="changeLanguage(this.value)">
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="ku">🇹🇯 Kurdî</option>
+  </select>
+</nav>
 
-  <section id="hakkimizda">
-    <h2>Hakkımızda</h2>
-    <p>Özer Aşireti, 1900 yılında Xale Şeğo tarafından kurulmuştur. Diyarbakır merkezlidir.</p>
-  </section>
+<section id="hakkimizda">
+  <h2>Hakkımızda</h2>
+  <p>Özer Aşireti, 1900 yılında Xale Şeğo tarafından kurulmuştur. Diyarbakır merkezlidir ve yüzyıllık bir geçmişe sahiptir. Günümüzde Said Özer’in önderliğinde güçlü bir şekilde faaliyet göstermektedir.</p>
+</section>
 
-  <section id="liderler">
-    <h2>Geçmiş Liderler</h2>
-    <ul>
-      <li>Xale Şeğo (1900 - 1944)</li>
-      <li>Hacı Bahri (1944 - 1970)</li>
-      <li>Ekrem Özer (1970 - 2007)</li>
-      <li>Kerem Özer (2007 - 2018)</li>
-      <li>Hacı Abdullah Özer (2018 - 2021)</li>
-      <li>Said Özer (2025 - ...)</li>
-    </ul>
-  </section>
+<section id="liderler">
+  <h2>Liderler</h2>
+  <ul>
+    <li>Xale Şeğo (1900 - 1944)</li>
+    <li>Hacı Bahri (1944 - 1970)</li>
+    <li>Ekrem Özer (1970 - 2007)</li>
+    <li>Kerem Özer (2007 - 2018)</li>
+    <li>Hacı Abdullah Özer (2018 - 2021)</li>
+    <li>Said Özer (2025 - ...)</li>
+  </ul>
+</section>
 
-  <section id="mahmut">
-    <h2>Mahmut Demiroğlu</h2>
-    <p>Kasım 2011’de Diyarbakır’da doğdu. Babası Serhat, annesi Esra Demiroğlu’dur. Babasının işi nedeniyle Ankara’ya taşındı ve eğitimine orada devam etmektedir.</p>
-  </section>
+<section id="said">
+  <h2>Said Özer</h2>
+  <p>2011 yılında Diyarbakır'da doğdu. İlk ve orta öğrenimini Diyarbakır’da tamamladı. Lise hazırlıklarına Gaffar Okan Lisesi’nde devam etmektedir.</p>
+</section>
 
-  <section id="haberler">
-    <h2>📰 Haberler</h2>
+<section id="mahmut">
+  <h2>Mahmut Demiroğlu</h2>
+  <p>11 Kasım 2011'de Diyarbakır'da doğmuştur. Babası Serhat, annesi Esra’dır. Anne tarafından Özer aşiretine mensuptur. Ailevi nedenlerle Ankara’ya taşınmış ve burada eğitimini sürdürmektedir. Genç yaşına rağmen halk arasında sevilen bir isimdir.</p>
+</section>
 
-    <div class="haber">
-      <h3>🔴 Serkan Yılmaz Özer Suikastı</h3>
-      <p>Özer Meclisi Genel Başkanı Serkan Yılmaz Özer, 37 yaşındayken Bismil’de aracına binerken Hacı Remzi’nin adamları tarafından öldürüldü.</p>
-    </div>
+<section id="haberler">
+  <h2>📰 Haberler</h2>
 
-    <div class="haber">
-      <h3>🗣️ Said Özer’den Açıklama</h3>
-      <p>Serkan Yılmaz Özer’in ölümünün ardından konuşan Said Özer: “Bu hain saldırının hesabı sorulacak. Aşiretimizin birliğini korumaya devam edeceğiz.” dedi.</p>
-    </div>
-<div class="haber">
-  <h3>🟢 Genç Kuşak: Mahmut Demiroğlu Eğitimde Parlıyor</h3>
-  <p>Özer Aşireti'nin genç temsilcilerinden Mahmut Demiroğlu, Ankara'da eğitim hayatına başarıyla devam ediyor. 2011 yılında Diyarbakır’da doğan Mahmut, babası Serhat Demiroğlu’nun işi nedeniyle başkente taşınarak eğitimine burada yön verdi. Aşiretin gelecekteki temsilcileri arasında önemli bir yere sahip olan Mahmut, akademik başarıları ve disiplini ile dikkat çekiyor.</p>
-</div>
-  </section>
+  <div class="haber">
+    <h3>⚠️ Serkan Yılmaz Özer'in Ölümü</h3>
+    <p>Meclis başkanı Serkan Yılmaz Özer, Bismil'de arabasına binerken Hacı Remzi'nin adamları tarafından suikaste uğradı. Aşiret büyük bir acıya boğuldu.</p>
+  </div>
 
-  <section id="iletisim">05309597498
-    <h2>İletişim</h2>
-    <p>📧 E-posta: <a href="mailto:ozerasireti@example.com">ozerasireti@example.com</a></p>
-    <p>📱 Instagram: <a href="https://instagram.com/sais_ozer2134" target="_blank">@senin_kullanici_adin</a></p>
-    <p>🏠 Adres: Ali Emiri 2. Sokak Yenişehir / Diyarbakır</p>
-  </section>
+  <div class="haber">
+    <h3>🗣️ Sait Bey'in Konuşması</h3>
+    <p>“Serkan’ın kaybı hepimiz için büyük bir acıdır. Fakat biz bir oldukça, Serkan’ın hayallerini birlikte yaşatacağız.”</p>
+  </div>
 
-  <!-- Yönetici Giriş Paneli -->
-  <section id="admin-panel">
-    <h2>Yönetici Paneli</h2>
-    <p>Hoş geldiniz. Bu bölüme erişim sağladınız.</p>
-  </section>
+  <div class="haber">
+    <h3>📢 Mahmut Demiroğlu’nun Konuşması</h3>
+    <p>Mahmut: “Birlikte daha güçlüyüz. Gençlik, Özer Aşireti’nin geleceğidir.”</p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Özer Aşireti</p>
-  </footer>
+<section id="soyağacı">
+  <h2>🧬 Soy Ağacı</h2>
+  <ul>
+    <li>Xale Şeğo
+      <ul>
+        <li>Hacı Bahri
+          <ul>
+            <li>Ekrem → Kerem → Said</li>
+            <li>Hacı Remzi → Baki, Nurettin, Veli, Meheme, Fatoş, Nafiye, Kübra</li>
+          </ul>
+        </li>
+        <li>Hacı Abdullah → Hatice, Amine, Nuriye, Nefise, Fatime, Esra, Kübra</li>
+      </ul>
+    </li>
+  </ul>
+</section>
 
-  <script>
-    function showLogin() {
-      const password = prompt("Yönetici şifresini girin:");
-      if (password === "ozer2025") {
-        document.getElementById("admin-panel").style.display = "block";
-        window.location = "#admin-panel";
-      } else {
-        alert("Yanlış şifre.");
-      }
-    }
-  </script>
+<section id="yorumlar">
+  <h2>💬 Ziyaretçi Yorumları</h2>
+
+  <div class="yorum"><strong>✔️ Güzel Yorum:</strong> Aşiretimizin kültürü çok güzel yansıtılmış, emeği geçenlere teşekkür ederiz.</div>
+  <div class="yorum"><strong>❗ Eleştirel Yorum:</strong> Siteye mobil destek biraz daha geliştirilmeli.</div>
+  <div class="yorum"><strong>❌ Kötü Yorum:</strong> Sayfa çok yavaş açılıyor, arayüz eski.</div>
+</section>
+
+<section id="iletisim">
+  <h2>📨 İletişim</h2>
+  <p>📧 Mail: <a href="mailto:ozerasireti@example.com">ozerasireti@example.com</a></p>
+  <p>📍Adres: Ali Emiri 2. Sokak, Kalender Apartmanı, B Blok, Kat 4, No 10, Yenişehir/Diyarbakır</p>
+  <p>📱 Instagram: <a href="https://instagram.com/senin_kullanici_adin" target="_blank">@senin_kullanici_adin</a></p>
+</section>
+
+<section id="admin-panel" class="admin-panel">
+  <h2>🔐 Yönetici Paneli</h2>
+  <p>Bu kısım sadece yöneticiler tarafından görüntülenebilir.</p>
+</section>
+
+<footer>
+  <p>© 2025 Özer Aşireti | Hazırlayan: <strong>Sen</strong></p>
+</footer>
 
 </body>
 </html>
