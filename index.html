@@ -10,6 +10,21 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #f9f7f7, #e0eafc);
       color: #333;
+      position: relative;
+    }
+
+    /* Bayrak arka plan */
+    body::before {
+      content: "";
+      background: url('bayrak.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     header {
@@ -61,7 +76,7 @@
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.9);
       margin-top: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -111,8 +126,7 @@
     <h2>Hoşgeldiniz</h2>
     <p>
       Özer Aşireti’nin resmi web sitesine hoşgeldiniz!  
-      Birlik, onur ve geçmişe duyulan saygı ile geleceğe yürüyen köklü bir topluluğuz.  
-      Burada tarihimizi, liderlerimizi ve değerlerimizi tanıyabilirsiniz.
+      Birlik, onur ve geçmişe duyulan saygı ile geleceğe yürüyen köklü bir topluluğuz.
     </p>
   </section>
 
@@ -131,17 +145,12 @@
   <section id="hakkimizda">
     <h2>Hakkımızda</h2>
     <p>
-      Özer Aşireti, 1900 yılında Xale Şeğo tarafından kurulmuş köklü ve saygıdeğer bir topluluktur. Yıllar boyunca birçok güçlü liderin önderliğinde
-      geleneklerine bağlı kalarak yaşamını sürdürmüştür. 2018 yılına kadar Bismil bölgesinde etkili olan aşiretimiz, Hacı Bahri’nin o yıl tüm toprakları
-      satmasıyla büyük bir sarsıntı yaşamıştır.
+      Özer Aşireti, 1900 yılında Xale Şeğo tarafından kurulmuş köklü ve saygıdeğer bir topluluktur. 2018 yılına kadar Bismil’de etkili olan aşiretimiz,
+      Hacı Bahri’nin o yıl tüm toprakları satmasıyla büyük bir çöküş yaşamıştır.
     </p>
     <p>
-      Bu olay sonrası 2021 yılında aşiret yapısı dağılmış ve topluluk Diyarbakır’a göç etmek zorunda kalmıştır. Ancak bugün, 2025 yılı itibariyle
-      genç ve vizyon sahibi liderimiz <strong>Said Özer</strong> önderliğinde aşiret yeniden ayağa kalkmakta, geçmişten aldığı güçle geleceğe doğru
-      emin adımlarla yürümektedir.
-    </p>
-    <p>
-      Özer Aşireti, tarihiyle gurur duyan; dayanışma, onur ve sadakat değerlerini yaşatmaya devam eden bir ailedir.
+      2021 yılında topluluk Diyarbakır’a göç etmiştir. Ancak 2025 yılı itibariyle, yeni liderimiz <strong>Said Özer</strong> önderliğinde aşiret yeniden toparlanmakta,
+      geçmişten aldığı güçle geleceğe emin adımlarla yürümektedir.
     </p>
   </section>
 
