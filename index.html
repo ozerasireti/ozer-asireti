@@ -2,186 +2,93 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <title>Özer Aşireti Resmi Sayfası</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Özer Aşireti Resmi Sitesi</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #d62828 33%, #ffffff 34%, #ffffff 66%, #007f2e 67%);
-      color: #000;
+      background: linear-gradient(to bottom, red, white, green);
+      color: black;
     }
-    header {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 20px;
+    header, footer {
       text-align: center;
+      padding: 1em;
+      background: rgba(255,255,255,0.8);
     }
     nav {
-      display: flex;
-      justify-content: center;
-      background-color: #444;
-      flex-wrap: wrap;
+      text-align: center;
+      background: rgba(0,0,0,0.1);
+      padding: 10px;
     }
     nav a {
-      color: white;
-      padding: 15px 20px;
+      margin: 0 10px;
       text-decoration: none;
-      display: block;
-    }
-    nav a:hover {
-      background-color: #666;
+      color: black;
+      font-weight: bold;
     }
     section {
       padding: 20px;
     }
-    .lang-select {
-      text-align: center;
-      margin-top: 10px;
+    .haber {
+      border-bottom: 1px solid gray;
+      padding: 10px 0;
     }
-    .lang-select button {
-      margin: 0 5px;
-      padding: 5px 10px;
-      cursor: pointer;
+    .button {
+      padding: 10px 20px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Özer Aşireti Resmi Web Sitesi</h1>
-    <p>Birlik, Güç, Miras</p>
+    <h1>Özer Aşireti Resmi Web Sayfası</h1>
   </header>
 
   <nav>
-    <a href="#anasayfa">Anasayfa</a>
-    <a href="#liderler">Liderler</a>
-    <a href="#soyağacı">Soy Ağacı</a>
     <a href="#haberler">Haberler</a>
+    <a href="#soyagaci">Soy Ağacı</a>
     <a href="#yorumlar">Yorumlar</a>
-    <a href="#canli">Canlı Yayın</a>
-    <a href="#iletisim">İletişim</a>
-    <a href="#admin">Yönetici Girişi</a>
+    <a href="https://www.instagram.com/said_ozer2134" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/live/QSswt1tEjJY?si=GeJ-zz0wPAQmbFsK" target="_blank">Canlı Yayın</a>
   </nav>
 
-  <div class="lang-select">
-    <button onclick="setLanguage('tr')">Türkçe</button>
-    <button onclick="setLanguage('ku')">Kürtçe</button>
-    <button onclick="setLanguage('en')">English</button>
-  </div>
-
-  <section id="anasayfa">
-    <h2>Hoş Geldiniz</h2>
-    <p>Özer Aşireti'nin resmi web sitesine hoş geldiniz. Aşiretimizin tarihi, liderleri ve güncel gelişmeleri burada bulabilirsiniz.</p>
+  <section id="haberler">
+    <h2>📢 Haberler</h2>
+    <div class="haber">
+      <h3>Serkan Yılmaz Özer suikaste uğradı</h3>
+      <p>Serkan Yılmaz Özer, 37 yaşındaydı. Meclisin genel başkanıydı. Bismil'de arabasına binerken, Hacı Remzi'nin adamları tarafından öldürüldü.</p>
+    </div>
+    <div class="haber">
+      <h3>Said Bey'den Açıklama</h3>
+      <p>"Bu hain saldırıyı en güçlü şekilde kınıyoruz. Özer Aşireti olarak birlik 
+        --Diğer 28 sahte haber de buraya eklenebilir -->
   </section>
 
-<script>
-  const translations = {
-    tr: {
-      welcome: "Özer Aşireti'nin resmi web sitesine hoş geldiniz.",
-      leaders: "Liderler",
-      familyTree: "Soy Ağacı",
-      news: "Haberler",
-      comments: "Yorumlar",
-      live: "Canlı Yayın",
-      contact: "İletişim",
-      admin: "Yönetici Girişi"
-    },
-    ku: {
-      welcome: "Bi xêr hatin malpera fermî ya aşîreta Özer.",
-      leaders: "Serokên",
-      familyTree: "Dara malbatê",
-      news: "Nûçe",
-      comments: "Şîrove",
-      live: "Yayınê zindî",
-      contact: "Têkelî",
-      admin: "Têketina rêvebirê"
-    },
-    en: {
-      welcome: "Welcome to the official website of the Özer Tribe.",
-      leaders: "Leaders",
-      familyTree: "Family Tree",
-      news: "News",
-      comments: "Comments",
-      live: "Live Stream",
-      contact: "Contact",
-      admin: "Admin Login"
-    }
-  };
+  <section id="soyagaci">
+    <h2>🌳 Soy Ağacı</h2>
+    <p><strong>Xale Şeğo</strong> → Hacı Bahri, Hacı Abdullah</p>
+    <p><strong>Hacı Bahri</strong> → Ekrem, Hacı Remzi</p>
+    <p><strong>Ekrem</strong> → Kerem → Said</p>
+    <p><strong>Hacı Remzi</strong> → Kade, Baki, Nurettin, Veli, Meheme, Fatoş, Nafiye, Kübra</p>
+    <p><strong>Hacı Abdullah</strong> → Hatice, Amine, Nuriye, Nefise, Fatime, Esra, Kübra</p>
+    <p><strong>Hacı Abdullah’ın Erkek Çocukları</strong>: Cihan, Remzi, Mehmet, Umran, Irşad, Nurullah, </p>
+  </section>
 
-  function setLanguage(lang) {
-    document.querySelector("#anasayfa p").textContent = translations[lang].welcome;
-    const links = document.querySelectorAll("nav a");
-    links[0].textContent = "Anasayfa";
-    links[1].textContent = translations[lang].leaders;
-    links[2].textContent = translations[lang].familyTree;
-    links[3].textContent = translations[lang].news;
-    links[4].textContent = translations[lang].comments;
-    links[5].textContent = translations[lang].live;
-    links[6].textContent = translations[lang].contact;
-    links[7].textContent = translations[lang].admin;<section id="admin-panel" style="padding: 20px; background-color: #f4f4f4;">
-  <h2>🔐 Yönetici Paneli Girişi</h2>
-  <form onsubmit="return checkPassword(event)">
-    <label for="adminPass">Şifre:</label>
-    <input type="password" id="adminPass" name="adminPass" required>
-    <button type="submit">Giriş Yap</button>
-  </form>
-  <div id="adminContent" style="display: none; margin-top: 15px;">
-    <p>🛠 Yönetici paneline hoş geldiniz. Burada içerikleri düzenleyebilirsiniz.</p>
-  </div>
-</section>
+  <section id="yorumlar">
+    <h2>💬 Yorumlar</h2>
+    <p>👍 Çok gurur verici bir site! — Ayşe</p>
+    <p>😐 Geliştirilebilir ama güzel düşünülmüş. — Mehmet</p>
+    <p>👎 Böyle siteler doğruyu yansıtmalı. — Zeynep</p>
+  </section>
 
-<script>
-  function checkPassword(e) {
-    e.preventDefault();
-    const password = document.getElementById('adminPass').value;
-    if (password === "ozer2025") {
-      document.getElementById('adminContent').style.display = 'block';
-    } else {
-      alert("Şifre yanlış!");
-    }
-  }
-</script>
-  }
-</script><section id="yorumlar" style="padding: 30px; background-color: #fff;">
-  <h2>💬 Ziyaretçi Yorumları</h2>
-
-  <div class="yorum">
-    <strong>🌟 Mehmet A.</strong>
-    <p>Site çok güzel olmuş, emeği geçenlere teşekkürler!</p>
-  </div>
-
-  <div class="yorum">
-    <strong>⚠️ Ayşe T.</strong>
-    <p>Bazı bölümler eksik gibi, özellikle soy ağacında açıklama istiyoruz.</p>
-  </div>
-
-  <div class="yorum">
-    <strong>💢 Ali V.</strong>
-    <p>Sayfa açılmıyor, mobilde sorun yaşadım.</p>
-  </div>
-
-  <hr>
-
-  <h3>✍️ Yorum Yap</h3>
-  <form onsubmit="gonderYorum(event)">
-    <input type="text" id="ad" placeholder="Adınız" required><br><br>
-    <textarea id="mesaj" placeholder="Yorumunuz..." rows="4" required></textarea><br><br>
-    <button type="submit">Gönder</button>
-  </form>
-
-  <div id="yeniYorumlar" style="margin-top: 20px;"></div>
-</section>
-
-<script>
-  function gonderYorum(e) {
-    e.preventDefault();
-    const ad = document.getElementById('ad').value;
-    const mesaj = document.getElementById('mesaj').value;
-    const div = document.createElement("div");
-    div.className = "yorum";
-    div.innerHTML = `<strong>🧑 ${ad}</strong><p>${mesaj}</p>`;
-    document.getElementById('yeniYorumlar').appendChild(div);
-    document.getElementById('ad').value = '';
-    document.getElementById('mesaj').value = '';
-  }
-</script>
+  <footer>
+    <p>© 2025 Özer Aşireti - Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
